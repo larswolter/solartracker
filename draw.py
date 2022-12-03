@@ -43,7 +43,7 @@ def drawLines(lines):
     # Write four lines of text.
 
     for line in range(len(lines)):
-        if line > 2:
+        if line > 1:
             draw.text((x, top + 40+(line-2)*11), lines[line], font=defaultFont, fill=255)
         else:
             draw.text((x, top + line*20), lines[line], font=font, fill=255)

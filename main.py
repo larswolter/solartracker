@@ -30,7 +30,7 @@ def main_loop():
             img = drawLines([f'{res["strings"][0]["power"]}W {res["strings"][0]["energy_daily"]}Wh',
                          f'{res["strings"][1]["power"]}W {res["strings"][1]["energy_daily"]}Wh',
                          f'{(float(res["strings"][0]["energy_total"]) + float(res["strings"][1]["energy_total"]))/1000}kWh',
-                         f'Temp:{res["temperature"]}, Übermittle...'])
+                         f'Temp:{res["temperature"]}, Sende...'])
             print(f'{res["strings"][0]["power"]}W {res["strings"][0]["energy_daily"]}Wh {res["strings"][1]["power"]}W {res["strings"][1]["energy_daily"]}Wh {(float(res["strings"][0]["energy_total"]) + float(res["strings"][1]["energy_total"]))/1000}kWh')
             displayImage(img, display)
             sendStatus = sendData(res,ahoy_config.get('rest_url',''))
@@ -38,7 +38,7 @@ def main_loop():
                 img = drawLines([f'{res["strings"][0]["power"]}W {res["strings"][0]["energy_daily"]}Wh',
                          f'{res["strings"][1]["power"]}W {res["strings"][1]["energy_daily"]}Wh',
                          f'{(float(res["strings"][0]["energy_total"]) + float(res["strings"][1]["energy_total"]))/1000}kWh',
-                         f'Übermittlungsfehler {sendStatus}'])
+                         f'Sendefehler {sendStatus}'])
             displayImage(img, display)
 
         else:
@@ -71,3 +71,4 @@ if __name__ == '__main__':
 
     except KeyboardInterrupt:
         sys.exit()
+
