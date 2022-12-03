@@ -1,0 +1,27 @@
+{
+  "inverter_ser": 000000000000,
+  "inverter_name": null,
+  "dtu_ser": null,
+  "phases": [{ "voltage": 236.1, "current": 1.1, "power": 25.0 }],
+  "strings": [
+    {
+      "voltage": 41.0,
+      "current": 0.27,
+      "power": 11.2,
+      "energy_total": 474,
+      "energy_daily": 13
+    },
+    {
+      "voltage": 41.1,
+      "current": 0.36,
+      "power": 15.0,
+      "energy_total": 19712,
+      "energy_daily": 17
+    }
+  ],
+  "temperature": 19.9,
+  "frequency": 50.02,
+  "powerfactor": 1.0,
+  "event_count": 6,
+  "time": "2022-01-01 01:00:00.000000"
+}
